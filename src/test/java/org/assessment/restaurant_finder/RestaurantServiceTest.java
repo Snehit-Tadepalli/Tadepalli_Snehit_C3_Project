@@ -35,8 +35,8 @@ class RestaurantServiceTest {
 		assertThrows(RestaurantNotFoundException.class, () -> service.findRestaurantByName("Snehit's Restaurant"));	
 	}
 	//<<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
+	
+	
 
 
 	//>>>>>>>>>>>>>>>>>>>>>>ADMIN: ADDING & REMOVING RESTAURANTS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

@@ -43,8 +43,29 @@ class RestaurantTest {
     }
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
     
+
+    //>>>>>>>>>>>>>>>>>>>>>>>>>CALCULATE TOTAL<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    
+    @Test
+    public void total_should_be_0_when_no_items_are_selected() {
+    	int expectedTotal = 0;
+    	assertEquals(expectedTotal, restaurant.calculateTotal());
+    }
+    
+    @Test
+    public void total_should_be_119_when_first_item_is_selected() {
+    	int expectedTotal = 119;
+    	assertEquals(expectedTotal, restaurant.calculateTotal("Sweet corn soup"));
+    }
+    
+    @Test
+    public void total_should_be_388_when_both_the_items_are_selected() {
+    	int expectedTotal = 119 + 269; // 388
+    	assertEquals(expectedTotal, restaurant.calculateTotal("Sweet corn soup", "Vegetable lasagne"));
+    }
+    
+    //<<<<<<<<<<<<<<<<<<<<<<<<<CALCULATE TOTAL>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
